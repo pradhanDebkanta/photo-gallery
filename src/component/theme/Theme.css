@@ -1,0 +1,103 @@
+.setting-box {
+    position: fixed;
+    left: 1rem;
+    top: calc(25% + 2rem);
+    z-index: 999;
+}
+
+.setting-button {
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 0.5s ease;
+}
+
+.setting-button:hover, .setting-button:active {
+    animation: none;
+    transition: all 0.5s ease;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hover-box {
+    position: absolute;
+    top: 1.25rem;
+    left: 4.2rem;
+    height: 4rem;
+    margin-top: 1rem;
+    width: 10rem;
+    background-color: var(--pop-bg);
+    border-radius: 0.3rem;
+    display: none;
+}
+
+.hover-text {
+    padding: 0.25rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.triangle {
+    display: block;
+    height: 0px;
+    width: 0px;
+    border: 12px solid transparent;
+    border-top-color: var(--pop-bg);
+    position: absolute;
+    top: 0px;
+    left: -11px;
+    transform: skewY(10deg);
+}
+
+.setting-box:hover .hover-box {
+    display: block !important;
+}
+
+@media (max-width: 767.8px) {
+    .setting-button {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .hover-box {
+        top: 1rem;
+        left: 3.5rem;
+        height: 3rem;
+    }
+    .hover-text{
+        padding: 0.15rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 479.8px){
+    .setting-button {
+        height: 2rem;
+        width: 2rem;
+    }
+    .hover-box {
+        top: 1.5rem;
+        left: 2.2rem;
+        height: 2.2rem;
+    }
+    .hover-text{
+        /* padding: 0.1rem; */
+        font-size: 0.7rem;
+    }
+
+    .triangle{
+        position: absolute;
+        top: 0;
+        left: -6px;
+    }
+
+}

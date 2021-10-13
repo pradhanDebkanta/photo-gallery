@@ -1,0 +1,154 @@
+.navbar{
+    flex-wrap: nowrap !important;
+    /* box-shadow: 0 1px 0px rgb(191, 134, 206) !important; */
+    margin-bottom: 5px !important;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+.brand-img-box {
+    display: inline-block;
+}
+
+.brand-img {
+    height: auto;
+    width: auto;
+}
+
+.brand-name {
+    display: inline;
+    text-decoration: none;
+    color: var(--brand-text);
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    word-spacing: 2px;
+}
+
+.form{
+    display: flex;
+    margin-left: auto;
+}
+.search-box {
+    height: 3.5rem;
+    width: auto;
+}
+
+.show-box {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.hidden-box {
+    display: none;
+}
+
+.search-input {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--brand-text);
+    display: inline;
+    width: 100%;
+    margin-left: auto;
+}
+
+.show-box .search-input {
+    animation: right-to-left 0.5s ease-in;
+}
+
+/* .hidden-box .search-input{
+    animation: left-to-right 0.4s ease-in; 
+
+} */
+
+.search-button {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.search-btn-img {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.search-btn-img:hover {
+    transform: rotate(15deg);
+    transition: transform 0.3s ease;
+}
+
+@keyframes right-to-left {
+    from {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    to {
+        transform: scaleX(100%);
+        transform-origin: right;
+    }
+}
+
+@keyframes left-to-right {
+    from {
+        transform: scaleX(100%);
+        transform-origin: right;
+    }
+    to {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+@media (max-width: 767.8px) {
+    .brand-img {
+        height: 4rem;
+        width: 4rem;
+    }
+    .brand-name {
+        padding-left: 0.7rem;
+        font-size: 1.3rem;
+    }
+    .form{
+        padding-left: 1rem;
+    }
+    .input-box{
+        width: 70%;
+    }
+}
+
+@media (max-width: 554px){
+    .navbar{
+        flex-wrap: wrap !important;
+    }
+}
+
+@media (max-width: 479.8px){
+    .navbar-brand{
+        height: 3.5rem !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .brand-img {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .brand-name {
+        padding-left: 0.5rem;
+        font-size: 1.1rem;
+    }
+    .form{
+        height: 2.75rem;
+    }
+    .search-box{
+        height: 2.75rem;
+    }
+    .search-btn-img{
+        height: 2.7rem;
+        width: 2.7rem;
+    }
+}
+
+@media (max-width: 368.8px){
+    .form{
+        margin-top: -6px;
+    }
+}

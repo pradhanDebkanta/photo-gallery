@@ -1,0 +1,27 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #374b5c;
+    /* --pop-bg: #CCF2F4; */
+    --pop-bg: #CAF7E3;
+    --brand-text: #A239EA;
+}
+
+[data-theme="dark"] {
+    --bg-color: #181818;
+    --text-color: #efefef;
+    --pop-bg: #404040;
+    --brand-text: #D62AD0;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.App{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    
+}
