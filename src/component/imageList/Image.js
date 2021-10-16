@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { saveAs } from 'file-saver';
 
-function Image({ item , handleClick}) {
-    const reference = useRef();
+const Image = React.forwardRef(({ item, handleClick }, ref) => {
     // console.log(item,'drom 6 deb')
 
     // const copyImg = async () => {
@@ -21,10 +20,10 @@ function Image({ item , handleClick}) {
             text: item.alt_description,
             url: item.urls.regular
         };
-        console.log(shareData, 'deb shareData')
+        // console.log(shareData, 'deb shareData')
         try {
             await navigator.share(shareData);
-            console.log('share succesfully');
+            // console.log('share succesfully');
 
         } catch (err) {
             console.log('error: ', err);
@@ -38,9 +37,9 @@ function Image({ item , handleClick}) {
     }
 
     return (
-        <div className="image" onClick={()=>handleClick(item.urls.regular)}>
+        <div className="image" onDoubleClick={() => handleClick(item.urls)} ref={ref}>
             <div className="img">
-                <img ref={reference} src={item.urls.regular} alt={item.alt_description} className="img-fluid" />
+                <img src={item.urls.regular} alt={item.alt_description} className="img-fluid" />
             </div>
             <div className="down-box">
                 <i className="fas fa-link" onClick={() => navigator.clipboard.writeText(item.urls.regular)}></i>
@@ -50,6 +49,6 @@ function Image({ item , handleClick}) {
             </div>
         </div>
     )
-};
+});
 
 export default Image;
