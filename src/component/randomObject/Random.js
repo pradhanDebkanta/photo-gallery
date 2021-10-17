@@ -13,7 +13,6 @@ export const Random = [
     "African Penguin",
     "African Tree Toad",
     "African Wild Dog",
-    "Ainu",
     "Airedale Terrier",
     "Airedoodle",
     "Akbash",
