@@ -1,9 +1,8 @@
-import React, { useState, useRef, useLayoutEffect, useCallback } from 'react';
+import React, { useState, useRef, useLayoutEffect, useCallback, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import Image from './Image';
 import './ImageList.css';
 import Modal from 'react-modal'
-import { useEffect } from 'react/cjs/react.development';
 
 const ImageList = ({ image, total_results, theme, nextPage, total_pages }) => {
     const [clickImage, setClickImage] = useState(null);
