@@ -34,7 +34,7 @@ const ImageList = ({ image, total_results, theme, nextPage, total_pages }) => {
         newSize();
         window.addEventListener('resize', newSize);
         return () => window.removeEventListener('resize', newSize);
-    }, [isZoom, clickImage])
+    }, [isZoom, clickImage]);
 
     useEffect(() => {
         if (image) {
@@ -49,7 +49,8 @@ const ImageList = ({ image, total_results, theme, nextPage, total_pages }) => {
             setHasMore(false);
         }
 
-    }, [image, total_results, total_pages])
+    }, [image, total_results, total_pages, pageNo]);
+    // console.log(pageNo, 'from imglist')
 
     const lastImageElementRef = useCallback(node => {
         if (isLoading) return;

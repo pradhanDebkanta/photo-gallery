@@ -3,7 +3,8 @@
     padding-top: 2rem;
     border-top: 1px dotted var(--brand-text);
 }
-.icon-box{
+
+.icon-box {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,21 +13,24 @@
     background-color: transparent;
     cursor: pointer;
 }
-.icon-box .icon{
+
+.icon-box .icon {
     color: #fff;
     font-size: 1.2rem;
 }
 
-.body-img{
+.body-img {
     max-height: 100%;
     max-width: 100%;
     display: flex;
 }
-.body-img-box{
+
+.body-img-box {
     margin: auto;
     background-color: red;
 }
-.zoom-icon-box{
+
+.zoom-icon-box {
     position: absolute;
     top: 32px;
     padding-left: 5px;
@@ -36,18 +40,19 @@
     /* display: block; */
     transition: all 0.3s ease;
 }
-.body-img-box:hover  .zoom-icon-box{
+
+.body-img-box:hover .zoom-icon-box {
     display: block;
     transition: all 0.3s ease;
 }
 
-.zoom-icon{
+.zoom-icon {
     font-size: 1rem;
     color: #fff;
     z-index: 999;
 }
 
-.body-img img{
+.body-img img {
     height: 100%;
     width: auto;
     margin-left: auto;
@@ -67,7 +72,7 @@
     transition: all 0.2s ease-out;
 }
 
-.image:hover img{
+.image:hover img {
     transform: scale(1);
     transition: all 0.2s ease-in;
     filter: brightness(60%);
@@ -114,13 +119,37 @@
     transition: all 0.5s ease-out;
     background-color: transparent;
 }
-.scroll-end{
+
+.scroll-end {
     display: flex;
     justify-content: center;
     margin: auto;
     font-size: 1.1rem;
     color: var(--brand-text);
     padding-bottom: 1rem;
+}
+
+.hover-msg {
+    position: fixed;
+    background-color: var(--pop-bg);
+    color: var(--hover-text);
+    display: none;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 0px 10px 0px 10px;
+    border: 2px groove #6f6;
+    animation: glow 1000ms ease-out infinite ;
+    z-index: 999;
+}
+@keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 10px rgba(0, 255, 0, .6), inset 0 0 8px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
 }
 
 @media (min-width: 1200px) {

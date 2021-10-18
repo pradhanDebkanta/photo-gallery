@@ -71,6 +71,7 @@ const App = () => {
     const changePageNo = () => {
         setPageNo((prevPageNo) => prevPageNo + 1);
     }
+    // console.log(pageNo);
     return (
         <div className="App" data-theme={lightTheme ? "light" : "dark"}>
             <Theme theme={onClickHandeler} />
@@ -90,8 +91,13 @@ const App = () => {
                 />
                 : <></>}
             {
-               error[0]? <ErrorPage msg= {error[0]} theme= {lightTheme}/> : !isReqSend ? <SearchAImg term={term} /> : !images.length ? <NoResult term={term} /> : <></>
+                error[0] ? <ErrorPage msg={error[0]} theme={lightTheme} /> : !isReqSend ? <SearchAImg term={term} /> : !images.length ? <NoResult term={term} /> : <></>
             }
+
+            <footer className="footer-container">
+                <p className="footer-text">🧡 Design by 
+                 <a href="https://github.com/pradhanDebkanta/" className="debkanta" target="_blank" rel="noreferrer noopener">Debkanta Pradhan</a></p>
+            </footer>
 
         </div>
     );
